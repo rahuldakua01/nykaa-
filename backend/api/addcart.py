@@ -1,9 +1,9 @@
 from fastapi import APIRouter,Depends
-from services.add_product import add_to_cart,get_cart_items,update_item,delete_item
-from schemas.add_product import AddToCart,Update
-from models.user import User
+from backend.services.add_product import add_to_cart,get_cart_items,update_item,delete_item
+from backend.schemas.add_product import AddToCart,Update
+from backend.models.user import User
 from sqlalchemy.orm import Session
-from core.dependencies import get_db,user_required
+from backend.core.dependencies import get_db,user_required
 
 
 router = APIRouter(prefix="/add_to_cart",tags=["Shopping Cart"])
