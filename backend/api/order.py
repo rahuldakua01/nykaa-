@@ -1,11 +1,11 @@
 import json
 from fastapi import APIRouter, Depends, HTTPException
-from schemas.order import CreateOrder
-from services.order_service import place_order,order_history
-from core.dependencies import get_current_user,get_db,user_required,get_admin_required
+from backend.schemas.order import CreateOrder
+from backend.services.order_service import place_order,order_history
+from backend.core.dependencies import get_current_user,get_db,user_required,get_admin_required
 from sqlalchemy.orm import Session
-from models.order import Order
-from models.user import User
+from backend.models.order import Order
+from backend.models.user import User
 from pydantic import BaseModel
 
 router = APIRouter(prefix="/order",tags=["Order"])
