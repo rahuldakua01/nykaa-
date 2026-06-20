@@ -1,9 +1,9 @@
 from fastapi import APIRouter,Depends,Form,UploadFile,File
-from schemas.seller import RegisterSeller
+from backend.schemas.seller import RegisterSeller
 from sqlalchemy.orm import Session
-from core.dependencies import get_db,get_admin_required,get_current_user,seller_required
-from services.seller_service import register_seller,delete_seller
-from services.product_service import add_product,delete_product
+from backend.core.dependencies import get_db,get_admin_required,get_current_user,seller_required
+from backend.services.seller_service import register_seller,delete_seller
+from backend.services.product_service import add_product,delete_product
 
 
 from typing import Optional
