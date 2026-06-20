@@ -1,7 +1,7 @@
 import json
-from models.order import Order
-from models.add_product import AddProduct
-from models.producr import Product
+from backend.models.order import Order
+from backend.models.add_product import AddProduct
+from backend.models.producr import Product
 from fastapi import HTTPException
 from sqlalchemy.orm import Session
 
